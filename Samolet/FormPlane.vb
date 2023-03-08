@@ -1,5 +1,4 @@
 ﻿Imports System.IO
-
 Public Class FormPlane
     Private FileRead As StreamReader
     Private FileJets As String = "jets.txt"
@@ -15,26 +14,20 @@ Public Class FormPlane
     Private Sub FormPlane_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         vNumFlight = MainF.vForNumFlight
 
-        FileRead = File.OpenText(FileFly)
-        Do
-            vInStr = FileRead.ReadLine()
-            If vInStr <> "" Then
-                flag1 = 0
-                If vInStr.Substring(9, 4) = vNumFlight Then
+        Using FileReadFly As New StreamReader(FileFly)
+            Do While Not FileReadFly.EndOfStream
+                vInStr = FileReadFly.ReadLine()
+                If vInStr <> "" AndAlso vInStr.Substring(9, 4) = vNumFlight Then
                     ForPlane = vInStr.Substring(14, 6)
+                    Exit Do
                 End If
-            Else
-                flag1 = 1
-            End If
-        Loop Until flag1 = 1
-        FileRead.Close()
+            Loop
+        End Using
 
-        FileRead = File.OpenText(FileJets)
-        Do
-            vInStr = FileRead.ReadLine()
-            If vInStr <> "" Then
-                flag1 = 0
-                If vInStr.Substring(3, 6) = ForPlane Then
+        Using FileReadJets As New StreamReader(FileJets)
+            Do While Not FileReadJets.EndOfStream
+                vInStr = FileReadJets.ReadLine()
+                If vInStr <> "" AndAlso vInStr.Substring(3, 6) = ForPlane Then
                     vPlaneform = vInStr.Substring(9, 16)
                     Label13.Text = vInStr.Substring(25, 1)
                     Label14.Text = vInStr.Substring(27, 3)
@@ -46,29 +39,34 @@ Public Class FormPlane
                     vUg2 = vInStr.Substring(39, 2)
                     vUg3 = (vUg1 + vUg2) / 2
                     Label16.Text = vUg3
+                    Exit Do
                 End If
-            Else
-                flag1 = 1
-            End If
-        Loop Until flag1 = 1
-        FileRead.Close()
+            Loop
+        End Using
 
         Label11.Text = ForPlane
         Label1.Text = vPlaneform
         Label12.Text = vPlaneform
-        If ForPlane = "a3006 " Then
-        ElseIf ForPlane = "a310_ " Then
-        ElseIf ForPlane = "a3103 " Then
-        ElseIf ForPlane = "a3402 " Then
-        ElseIf ForPlane = "b7672 " Then
-        ElseIf ForPlane = "b7772 " Then
-        ElseIf ForPlane = "canje " Then
-        ElseIf ForPlane = "il62m " Then
-        ElseIf ForPlane = "il86_ " Then
-        ElseIf ForPlane = "il96_ " Then
-        ElseIf ForPlane = "rj85_ " Then
-        ElseIf ForPlane = "tu134 " Then
-        ElseIf ForPlane = "tu154 " Then
+
+        Dim imagesDict As New Dictionary(Of String, String) From {
+            {"a3006 ", "AirbusA300-600.jpg"},
+            {"a310_ ", "AirbusA310.jpg"},
+            {"a3103 ", "AirbusA310-600.jpg"},
+            {"a3402 ", "AirbusA340-200.jpg"},
+            {"b7672 ", "Boeing777-200.jpg"},
+            {"b7772 ", "Boeing777-200.jpg"},
+            {"canje ", "Canadairt.jpg"},
+            {"il62m ", "il-62.jpg"},
+            {"il86_ ", "il-86.jpg"},
+            {"il96_ ", "il-96.jpg"},
+            {"rj85_ ", "RJ85.jpg"},
+            {"tu134 ", "tu-134.jpg"},
+            {"tu154 ", "Tu-154.jpg"}
+        }
+
+        If imagesDict.ContainsKey(ForPlane) Then
+            PictureBox1.BackgroundImage = Image.FromFile(imagesDict(ForPlane))
         End If
+
     End Sub
 End Class

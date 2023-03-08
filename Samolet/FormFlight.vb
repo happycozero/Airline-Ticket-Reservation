@@ -2,7 +2,6 @@
 Imports System.Text.ASCIIEncoding
 Imports System.IO
 Imports System.Math
-Imports System.Text
 Public Class FormFlight
     Private vNumFlight As Integer
     Private FileFly As String = "fly.txt"
@@ -27,120 +26,77 @@ Public Class FormFlight
     Private vRast As Integer
     Private vShirotaX, vShirotaY, vShirotaG, vShirotaM, vShirotaGL, vShirotaML As Integer
     Private vDolgotaX, vDolgotaY, vDolgotaG, vDolgotaM, vDolgotaGL, vDolgotaML As Integer
+    Private Shared Function InlineAssignHelper(Of T)(ByRef target As T, ByVal value As T) As T
+        target = value
+        Return value
+    End Function
     Private Sub FormFlight_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim flightNumber As String = MainF.vForNumFlight
-        Dim flightInfo As String = MainF.vStr
-        Dim fileReader As StreamReader = Nothing
-        Try
-            fileReader = File.OpenText(FileFly)
-            Do
-                Dim line As String = fileReader.ReadLine()
-                If Not String.IsNullOrEmpty(line) Then
-                    Dim flightCode As String = line.Substring(14, 6)
-                    If line.Substring(9, 4) = flightNumber Then
-                        Label15.Text = flightNumber
-                        Label14.Text = line.Substring(3, 6)
-                        Label18.Text = line.Substring(36, 4)
-                        Dim timeCh As String = line.Substring(40, 2)
-                        Dim timeMin As String = line.Substring(43, 2)
-                        Label19.Text = String.Format("{0}:{1}", timeCh, timeMin)
-                        Dim weekDays As String = line.Substring(20, 7)
-                        If line.Substring(62, 4) = "--- " Then
-                            Label23.Text = line.Substring(46, 4)
-                            timeCh = line.Substring(50, 2)
-                            timeMin = line.Substring(53, 2)
-                            Label24.Text = String.Format("{0}:{1}", timeCh, timeMin)
-                        Else
-                            Label20.Text = line.Substring(46, 4)
-                            timeCh = line.Substring(50, 2)
-                            timeMin = line.Substring(53, 2)
-                            Label21.Text = String.Format("{0}:{1}", timeCh, timeMin)
-                            timeCh = line.Substring(56, 2)
-                            timeMin = line.Substring(59, 2)
-                            Label22.Text = String.Format("{0}:{1}", timeCh, timeMin)
-                            Label23.Text = line.Substring(62, 4)
-                            timeCh = line.Substring(66, 2)
-                            timeMin = line.Substring(69, 2)
-                            Label24.Text = String.Format("{0}:{1}", timeCh, timeMin)
-                        End If
-                    End If
-                Else
-                    Exit Do
-                End If
-            Loop
-        Catch ex As Exception
-        Finally
-            If fileReader IsNot Nothing Then
-                fileReader.Close()
-            End If
-        End Try
 
-        Using FileRead As StreamReader = File.OpenText(FileJets)
-            Dim flag1 As Integer = 0
-            While flag1 = 0
-                Dim vInStr As String = FileRead.ReadLine()
-                If vInStr <> "" AndAlso vInStr.Substring(3, 6) = vCodePlane Then
-                    Label16.Text = vInStr.Substring(9, 16)
-                    flag1 = 1
+        Dim numFlight As String = MainF.vForNumFlight
+        Label2.Text = MainF.vStr
+
+        Using sr As New StreamReader(FileFly)
+            Dim line As String
+            While (InlineAssignHelper(line, sr.ReadLine())) IsNot Nothing
+                If line.Substring(9, 4) = numFlight Then
+                    Dim codePlane As String = line.Substring(14, 6)
+                    Dim timeCh As String = line.Substring(40, 2)
+                    Dim timeMin As String = line.Substring(43, 2)
+                    Dim weekDays() As String = {line.Substring(20, 1), line.Substring(21, 1), line.Substring(22, 1),
+                                                line.Substring(23, 1), line.Substring(24, 1), line.Substring(25, 1), line.Substring(26, 1)}
+
+                    Label15.Text = line.Substring(9, 4)
+                    Label14.Text = line.Substring(3, 6)
+                    Label18.Text = line.Substring(36, 4)
+                    Label19.Text = timeCh & ":" & timeMin
+
+                    If line.Substring(62, 4) = "--- " Then
+                        Label23.Text = line.Substring(46, 4)
+                        Label24.Text = timeCh & ":" & timeMin
+                    Else
+                        Label20.Text = line.Substring(46, 4)
+                        Label21.Text = timeCh & ":" & timeMin
+                        timeCh = line.Substring(56, 2)
+                        timeMin = line.Substring(59, 2)
+                        Label22.Text = timeCh & ":" & timeMin
+                        Label23.Text = line.Substring(62, 4)
+                        timeCh = line.Substring(66, 2)
+                        timeMin = line.Substring(69, 2)
+                        Label24.Text = timeCh & ":" & timeMin
+                    End If
+
+                    Exit While
                 End If
             End While
         End Using
 
-        Dim sb As New StringBuilder()
-        If vWeek1(0) = "1"c Then
-            sb.Append(vPn).Append(",")
-        End If
-        If vWeek2(0) = "2"c Then
-            sb.Append(vVt).Append(",")
-        End If
-        If vWeek3(0) = "3"c Then
-            sb.Append(vSr).Append(",")
-        End If
-        If vWeek4(0) = "4"c Then
-            sb.Append(vCht).Append(",")
-        End If
-        If vWeek5(0) = "5"c Then
-            sb.Append(vPt).Append(",")
-        End If
-        If vWeek6(0) = "6"c Then
-            sb.Append(vSub).Append(",")
-        End If
-        If vWeek7(0) = "7"c Then
-            sb.Append(vVs)
-        End If
-        Label17.Text = sb.ToString()
+        Dim fileLines As String() = File.ReadAllLines(FileJets)
 
-        Dim vShirotaG As Double, vShirotaM As Double, vShirotaGL As Double, vShirotaML As Double
-        Dim vDolgotaG As Double, vDolgotaM As Double, vDolgotaGL As Double, vDolgotaML As Double
-        Double.TryParse(MainF.ShirG, vShirotaG)
-        Double.TryParse(MainF.ShirM, vShirotaM)
-        Double.TryParse(MainF.ShirGL, vShirotaGL)
-        Double.TryParse(MainF.ShirML, vShirotaML)
-        Double.TryParse(MainF.DolgG, vDolgotaG)
-        Double.TryParse(MainF.DolgM, vDolgotaM)
-        Double.TryParse(MainF.DolgGL, vDolgotaGL)
-        Double.TryParse(MainF.DolgML, vDolgotaML)
+        For Each line As String In fileLines
+            If line <> "" AndAlso line.Substring(3, 6) = vCodePlane Then
+                Label16.Text = line.Substring(9, 16)
+                Exit For
+            End If
+        Next
 
-        Dim degToRad As Double = Math.PI / 180
-        Dim radToDeg As Double = 180 / Math.PI
+        If vWeek1(0) = "1" Then vVivod = vPn + ","
+        If vWeek2(0) = "2" Then vVivod += vVt + ","
+        If vWeek3(0) = "3" Then vVivod += vSr + ","
+        If vWeek4(0) = "4" Then vVivod += vCht + ","
+        If vWeek5(0) = "5" Then vVivod += vPt + ","
+        If vWeek6(0) = "6" Then vVivod += vSub + ","
+        If vWeek7(0) = "7" Then vVivod += vVs
+        Label17.Text = vVivod
 
-        Dim shirotaMins As Double = vShirotaM * 60 + vShirotaML
-        Dim dolgotaMins As Double = vDolgotaM * 60 + vDolgotaML
+        With MainF
+            Dim shirotaX As Double = (.ShirG + .ShirM / 60) * Math.PI / 180
+            Dim shirotaY As Double = (.ShirGL + .ShirML / 60) * Math.PI / 180
+            Dim dolgotaX As Double = (.DolgG + .DolgM / 60) * Math.PI / 180
+            Dim dolgotaY As Double = (.DolgGL + .DolgML / 60) * Math.PI / 180
 
-        Dim shirotaX As Double = (vShirotaG + shirotaMins / 60) * degToRad
-        Dim shirotaY As Double = (vShirotaGL + vShirotaML / 60) * degToRad
-        Dim dolgotaX As Double = (vDolgotaG + dolgotaMins / 60) * degToRad
-        Dim dolgotaY As Double = (vDolgotaGL + vDolgotaML / 60) * degToRad
+            Dim distance As Double = 40000 * Math.Acos(Math.Sin(shirotaX) * Math.Sin(shirotaY) + Math.Cos(shirotaX) * Math.Cos(shirotaY) * Math.Cos(dolgotaX - dolgotaY))
 
-        Dim cosDiff As Double = Math.Cos(dolgotaX - dolgotaY)
-        Dim sinShirotaX As Double = Math.Sin(shirotaX)
-        Dim sinShirotaY As Double = Math.Sin(shirotaY)
-        Dim cosShirotaX As Double = Math.Cos(shirotaX)
-        Dim cosShirotaY As Double = Math.Cos(shirotaY)
-
-        Dim rast As Double = 40000 * Math.Acos(sinShirotaX * sinShirotaY + cosShirotaX * cosShirotaY * cosDiff)
-
-        Label26.Text = rast
-
+            Label26.Text = distance.ToString()
+        End With
     End Sub
 End Class

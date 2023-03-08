@@ -1,18 +1,1 @@
-C:\Users\happycozero\Documents\GitHub\Airline-Ticket-Reservation\Samolet\bin\Debug\Samolet.exe.config
-C:\Users\happycozero\Documents\GitHub\Airline-Ticket-Reservation\Samolet\bin\Debug\country.txt
-C:\Users\happycozero\Documents\GitHub\Airline-Ticket-Reservation\Samolet\bin\Debug\fly.txt
-C:\Users\happycozero\Documents\GitHub\Airline-Ticket-Reservation\Samolet\bin\Debug\jets.txt
-C:\Users\happycozero\Documents\GitHub\Airline-Ticket-Reservation\Samolet\bin\Debug\sity.txt
-C:\Users\happycozero\Documents\GitHub\Airline-Ticket-Reservation\Samolet\bin\Debug\Samolet.exe
-C:\Users\happycozero\Documents\GitHub\Airline-Ticket-Reservation\Samolet\bin\Debug\Samolet.pdb
-C:\Users\happycozero\Documents\GitHub\Airline-Ticket-Reservation\Samolet\bin\Debug\Samolet.xml
-C:\Users\happycozero\Documents\GitHub\Airline-Ticket-Reservation\Samolet\obj\Debug\Samolet.FormFlight.resources
-C:\Users\happycozero\Documents\GitHub\Airline-Ticket-Reservation\Samolet\obj\Debug\Samolet.FormPlane.resources
-C:\Users\happycozero\Documents\GitHub\Airline-Ticket-Reservation\Samolet\obj\Debug\Samolet.Resources.resources
-C:\Users\happycozero\Documents\GitHub\Airline-Ticket-Reservation\Samolet\obj\Debug\Samolet.vbproj.GenerateResource.Cache
-C:\Users\happycozero\Documents\GitHub\Airline-Ticket-Reservation\Samolet\obj\Debug\Samolet.exe
-C:\Users\happycozero\Documents\GitHub\Airline-Ticket-Reservation\Samolet\obj\Debug\Samolet.xml
-C:\Users\happycozero\Documents\GitHub\Airline-Ticket-Reservation\Samolet\obj\Debug\Samolet.pdb
-C:\Users\happycozero\Documents\GitHub\Airline-Ticket-Reservation\Samolet\obj\Debug\Samolet.MainF.resources
-C:\Users\happycozero\Documents\GitHub\Airline-Ticket-Reservation\Samolet\obj\Debug\Samolet.Warning1.resources
-C:\Users\happycozero\Documents\GitHub\Airline-Ticket-Reservation\Samolet\obj\Debug\Samolet.Warning2.resources
+C:\Users\happycozero\Documents\4 Неделя\Samolet\bin\Debug\Samolet.exe.config

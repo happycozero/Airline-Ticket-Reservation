@@ -56,19 +56,18 @@ Partial Class FormPlane
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.PictureBox1)
-        Me.Panel1.Location = New System.Drawing.Point(468, 12)
+        Me.Panel1.Location = New System.Drawing.Point(477, 12)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(342, 419)
+        Me.Panel1.Size = New System.Drawing.Size(342, 323)
         Me.Panel1.TabIndex = 1
         '
         'Label1
         '
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.Label1.Location = New System.Drawing.Point(12, 11)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(316, 25)
         Me.Label1.TabIndex = 3
-        Me.Label1.Text = "Фотография"
+        Me.Label1.Text = "Изображение"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'PictureBox1
@@ -109,172 +108,154 @@ Partial Class FormPlane
         '
         'Label19
         '
-        Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.Label19.Location = New System.Drawing.Point(328, 378)
+        Me.Label19.Location = New System.Drawing.Point(322, 378)
         Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(108, 26)
+        Me.Label19.Size = New System.Drawing.Size(117, 26)
         Me.Label19.TabIndex = 17
         Me.Label19.Text = "-"
         Me.Label19.TextAlign = System.Drawing.ContentAlignment.BottomLeft
         '
         'Label18
         '
-        Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.Label18.Location = New System.Drawing.Point(328, 339)
+        Me.Label18.Location = New System.Drawing.Point(322, 339)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(108, 30)
+        Me.Label18.Size = New System.Drawing.Size(117, 30)
         Me.Label18.TabIndex = 16
         Me.Label18.Text = "-"
         Me.Label18.TextAlign = System.Drawing.ContentAlignment.BottomLeft
         '
         'Label17
         '
-        Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.Label17.Location = New System.Drawing.Point(328, 313)
+        Me.Label17.Location = New System.Drawing.Point(322, 313)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(108, 26)
+        Me.Label17.Size = New System.Drawing.Size(117, 26)
         Me.Label17.TabIndex = 15
         Me.Label17.Text = "-"
         Me.Label17.TextAlign = System.Drawing.ContentAlignment.BottomLeft
         '
         'Label16
         '
-        Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.Label16.Location = New System.Drawing.Point(328, 251)
+        Me.Label16.Location = New System.Drawing.Point(322, 251)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(108, 40)
+        Me.Label16.Size = New System.Drawing.Size(117, 40)
         Me.Label16.TabIndex = 14
         Me.Label16.Text = "-"
         Me.Label16.TextAlign = System.Drawing.ContentAlignment.BottomLeft
         '
         'Label15
         '
-        Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.Label15.Location = New System.Drawing.Point(328, 181)
+        Me.Label15.Location = New System.Drawing.Point(322, 181)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(108, 53)
+        Me.Label15.Size = New System.Drawing.Size(117, 53)
         Me.Label15.TabIndex = 13
         Me.Label15.Text = "-"
         Me.Label15.TextAlign = System.Drawing.ContentAlignment.BottomLeft
         '
         'Label14
         '
-        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.Label14.Location = New System.Drawing.Point(328, 139)
+        Me.Label14.Location = New System.Drawing.Point(322, 139)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(108, 25)
+        Me.Label14.Size = New System.Drawing.Size(117, 25)
         Me.Label14.TabIndex = 12
         Me.Label14.Text = "-"
         Me.Label14.TextAlign = System.Drawing.ContentAlignment.BottomLeft
         '
         'Label13
         '
-        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.Label13.Location = New System.Drawing.Point(328, 100)
+        Me.Label13.Location = New System.Drawing.Point(322, 100)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(108, 25)
+        Me.Label13.Size = New System.Drawing.Size(117, 25)
         Me.Label13.TabIndex = 11
         Me.Label13.Text = "-"
         Me.Label13.TextAlign = System.Drawing.ContentAlignment.BottomLeft
         '
         'Label12
         '
-        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.Label12.Location = New System.Drawing.Point(328, 64)
+        Me.Label12.Location = New System.Drawing.Point(322, 64)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(108, 26)
+        Me.Label12.Size = New System.Drawing.Size(117, 26)
         Me.Label12.TabIndex = 10
         Me.Label12.Text = "-"
         Me.Label12.TextAlign = System.Drawing.ContentAlignment.BottomLeft
         '
         'Label11
         '
-        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.Label11.Location = New System.Drawing.Point(328, 26)
+        Me.Label11.Location = New System.Drawing.Point(322, 26)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(108, 26)
+        Me.Label11.Size = New System.Drawing.Size(117, 26)
         Me.Label11.TabIndex = 9
         Me.Label11.Text = "-"
         Me.Label11.TextAlign = System.Drawing.ContentAlignment.BottomLeft
         '
         'Label10
         '
-        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.Label10.Location = New System.Drawing.Point(22, 378)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(317, 40)
+        Me.Label10.Size = New System.Drawing.Size(304, 40)
         Me.Label10.TabIndex = 8
         Me.Label10.Text = "Расход горючего (л/км)"
         '
         'Label9
         '
-        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.Label9.Location = New System.Drawing.Point(22, 346)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(317, 32)
+        Me.Label9.Size = New System.Drawing.Size(304, 32)
         Me.Label9.TabIndex = 7
         Me.Label9.Text = "Количество стюардов"
         '
         'Label8
         '
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.Label8.Location = New System.Drawing.Point(22, 313)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(317, 33)
+        Me.Label8.Size = New System.Drawing.Size(304, 33)
         Me.Label8.TabIndex = 6
         Me.Label8.Text = "Количество пилотов"
         '
         'Label7
         '
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.Label7.Location = New System.Drawing.Point(22, 251)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(317, 53)
+        Me.Label7.Size = New System.Drawing.Size(304, 53)
         Me.Label7.TabIndex = 5
         Me.Label7.Text = "Предельно допустимый ветер с углов "
         '
         'Label6
         '
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.Label6.Location = New System.Drawing.Point(22, 181)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(317, 53)
+        Me.Label6.Size = New System.Drawing.Size(304, 53)
         Me.Label6.TabIndex = 4
         Me.Label6.Text = "Требуемая длина взлетно-посадочной полосы"
         '
         'Label5
         '
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.Label5.Location = New System.Drawing.Point(22, 139)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(205, 25)
+        Me.Label5.Size = New System.Drawing.Size(192, 25)
         Me.Label5.TabIndex = 3
         Me.Label5.Text = "Скорость полета"
         '
         'Label4
         '
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.Label4.Location = New System.Drawing.Point(22, 100)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(217, 25)
+        Me.Label4.Size = New System.Drawing.Size(204, 25)
         Me.Label4.TabIndex = 2
         Me.Label4.Text = "Число двигателей"
         '
         'Label3
         '
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.Label3.Location = New System.Drawing.Point(22, 62)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(317, 28)
+        Me.Label3.Size = New System.Drawing.Size(304, 28)
         Me.Label3.TabIndex = 1
         Me.Label3.Text = "Наименование самолета"
         '
         'Label2
         '
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.Label2.Location = New System.Drawing.Point(22, 26)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(226, 26)
+        Me.Label2.Size = New System.Drawing.Size(213, 26)
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Код типа самолета"
         '
@@ -282,7 +263,7 @@ Partial Class FormPlane
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(824, 444)
+        Me.ClientSize = New System.Drawing.Size(831, 446)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
