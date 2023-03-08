@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form1
+Partial Class MainF
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -23,7 +23,7 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainF))
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -86,7 +86,6 @@ Partial Class Form1
         'ComboBox1
         '
         Me.ComboBox1.BackColor = System.Drawing.Color.White
-        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Location = New System.Drawing.Point(67, 61)
@@ -96,7 +95,7 @@ Partial Class Form1
         '
         'Label1
         '
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.Label1.Location = New System.Drawing.Point(72, 4)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(278, 54)
@@ -330,7 +329,7 @@ Partial Class Form1
         '
         Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.Button1.Location = New System.Drawing.Point(17, 491)
+        Me.Button1.Location = New System.Drawing.Point(17, 403)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(151, 78)
         Me.Button1.TabIndex = 2
@@ -351,7 +350,7 @@ Partial Class Form1
         'Label2
         '
         Me.Label2.BackColor = System.Drawing.Color.White
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.Label2.Location = New System.Drawing.Point(12, 9)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(249, 44)
@@ -389,7 +388,7 @@ Partial Class Form1
         '
         Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.Button2.Location = New System.Drawing.Point(17, 403)
+        Me.Button2.Location = New System.Drawing.Point(17, 491)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(151, 78)
         Me.Button2.TabIndex = 3
@@ -400,9 +399,9 @@ Partial Class Form1
         '
         Me.LabCounter.BackColor = System.Drawing.Color.White
         Me.LabCounter.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabCounter.Location = New System.Drawing.Point(255, 9)
+        Me.LabCounter.Location = New System.Drawing.Point(262, 12)
         Me.LabCounter.Name = "LabCounter"
-        Me.LabCounter.Size = New System.Drawing.Size(73, 44)
+        Me.LabCounter.Size = New System.Drawing.Size(66, 44)
         Me.LabCounter.TabIndex = 4
         Me.LabCounter.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -644,7 +643,7 @@ Partial Class Form1
         '
         'Label51
         '
-        Me.Label51.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
+        Me.Label51.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.Label51.Location = New System.Drawing.Point(72, 19)
         Me.Label51.Name = "Label51"
         Me.Label51.Size = New System.Drawing.Size(278, 49)
@@ -652,7 +651,7 @@ Partial Class Form1
         Me.Label51.Text = "Город прибытия" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         Me.Label51.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         '
-        'Form1
+        'MainF
         '
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit
         Me.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange
@@ -664,7 +663,7 @@ Partial Class Form1
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
-        Me.Name = "Form1"
+        Me.Name = "MainF"
         Me.ShowIcon = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Справочная система"

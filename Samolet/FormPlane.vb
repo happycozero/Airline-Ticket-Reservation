@@ -12,9 +12,8 @@ Public Class FormPlane
     Private vSravn As String
     Private vUg1, vUg2, vUg3 As Integer
     Private vNumFlight As Integer
-
     Private Sub FormPlane_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        vNumFlight = Form1.vForNumFlight
+        vNumFlight = MainF.vForNumFlight
 
         FileRead = File.OpenText(FileFly)
         Do
@@ -72,5 +71,4 @@ Public Class FormPlane
         ElseIf ForPlane = "tu154 " Then
         End If
     End Sub
-
 End Class

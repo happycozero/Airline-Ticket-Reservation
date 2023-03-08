@@ -1,6 +1,5 @@
 ﻿Imports System.IO
-
-Public Class Form1
+Public Class MainF
     Private FileRead As StreamReader
     Private vInStr As String
     Private FileSity As String = "sity.txt"
@@ -55,7 +54,9 @@ Public Class Form1
         End Using
     End Sub
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        MsgBox(IIf(ComboBox1.Text = "", "Выберите город отправления!", ""), vbOK + vbCritical, "Ошибка")
+        If ComboBox1.Items.Count = 0 Then
+            MessageBox.Show("Ошибка! ComboBox пустой.")
+        End If
 
         If ComboBox1.Text <> "" Then
             vCounter = 0
@@ -187,13 +188,13 @@ Public Class Form1
 
             ' Проверяем, на какой форме должен быть показан результат
             If vPlanePoloca >= vPoloca1 And vPlanePoloca >= vPoloca2 And vCDop3 = "0" Then
-                Form2.Show()
+                Warning1.Show()
             ElseIf vPlanePoloca >= vPoloca1 And vPlanePoloca >= vPoloca2 And vCDop3 <> "0" And vPlanePoloca >= vPoloca3 Then
-                Form2.Show()
+                Warning1.Show()
             ElseIf vVeter1 > vPlaneVeter And vVeter2 > vPlaneVeter And vCDop3 = "0" Then
-                Form3.Show()
+                Warning2.Show()
             ElseIf vVeter1 > vPlaneVeter And vVeter2 > vPlaneVeter And vCDop3 <> "0" And vVeter3 > vPlaneVeter Then
-                Form3.Show()
+                Warning2.Show()
             Else
                 FormFlight.Show()
             End If
@@ -209,6 +210,8 @@ Public Class Form1
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
         vCity = ComboBox1.Text
         Call CityInf()
+
+
     End Sub
     Private Sub CityInf()
         vCity = ComboBox1.Text
@@ -319,6 +322,11 @@ Public Class Form1
         End If
         If result = DialogResult.No Then
 
+        End If
+    End Sub
+    Private Sub ComboBox1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles ComboBox1.KeyPress
+        If Not Char.IsLetter(e.KeyChar) AndAlso Not Char.IsWhiteSpace(e.KeyChar) AndAlso Not e.KeyChar = ControlChars.Back Then
+            e.Handled = True
         End If
     End Sub
 End Class

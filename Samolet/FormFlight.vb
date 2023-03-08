@@ -3,7 +3,6 @@ Imports System.Text.ASCIIEncoding
 Imports System.IO
 Imports System.Math
 Imports System.Text
-
 Public Class FormFlight
     Private vNumFlight As Integer
     Private FileFly As String = "fly.txt"
@@ -29,8 +28,8 @@ Public Class FormFlight
     Private vShirotaX, vShirotaY, vShirotaG, vShirotaM, vShirotaGL, vShirotaML As Integer
     Private vDolgotaX, vDolgotaY, vDolgotaG, vDolgotaM, vDolgotaGL, vDolgotaML As Integer
     Private Sub FormFlight_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim flightNumber As String = Form1.vForNumFlight
-        Dim flightInfo As String = Form1.vStr
+        Dim flightNumber As String = MainF.vForNumFlight
+        Dim flightInfo As String = MainF.vStr
         Dim fileReader As StreamReader = Nothing
         Try
             fileReader = File.OpenText(FileFly)
@@ -113,14 +112,14 @@ Public Class FormFlight
 
         Dim vShirotaG As Double, vShirotaM As Double, vShirotaGL As Double, vShirotaML As Double
         Dim vDolgotaG As Double, vDolgotaM As Double, vDolgotaGL As Double, vDolgotaML As Double
-        Double.TryParse(Form1.ShirG, vShirotaG)
-        Double.TryParse(Form1.ShirM, vShirotaM)
-        Double.TryParse(Form1.ShirGL, vShirotaGL)
-        Double.TryParse(Form1.ShirML, vShirotaML)
-        Double.TryParse(Form1.DolgG, vDolgotaG)
-        Double.TryParse(Form1.DolgM, vDolgotaM)
-        Double.TryParse(Form1.DolgGL, vDolgotaGL)
-        Double.TryParse(Form1.DolgML, vDolgotaML)
+        Double.TryParse(MainF.ShirG, vShirotaG)
+        Double.TryParse(MainF.ShirM, vShirotaM)
+        Double.TryParse(MainF.ShirGL, vShirotaGL)
+        Double.TryParse(MainF.ShirML, vShirotaML)
+        Double.TryParse(MainF.DolgG, vDolgotaG)
+        Double.TryParse(MainF.DolgM, vDolgotaM)
+        Double.TryParse(MainF.DolgGL, vDolgotaGL)
+        Double.TryParse(MainF.DolgML, vDolgotaML)
 
         Dim degToRad As Double = Math.PI / 180
         Dim radToDeg As Double = 180 / Math.PI
