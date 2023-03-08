@@ -22,6 +22,7 @@ Partial Class FormFlight
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormFlight))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label26 = New System.Windows.Forms.Label()
         Me.Label25 = New System.Windows.Forms.Label()
@@ -84,12 +85,12 @@ Partial Class FormFlight
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Location = New System.Drawing.Point(12, 12)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(632, 440)
+        Me.Panel1.Size = New System.Drawing.Size(607, 440)
         Me.Panel1.TabIndex = 0
         '
         'Label26
         '
-        Me.Label26.Location = New System.Drawing.Point(381, 396)
+        Me.Label26.Location = New System.Drawing.Point(346, 396)
         Me.Label26.Name = "Label26"
         Me.Label26.Size = New System.Drawing.Size(235, 31)
         Me.Label26.TabIndex = 25
@@ -98,6 +99,7 @@ Partial Class FormFlight
         '
         'Label25
         '
+        Me.Label25.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.Label25.Location = New System.Drawing.Point(19, 396)
         Me.Label25.Name = "Label25"
         Me.Label25.Size = New System.Drawing.Size(342, 31)
@@ -106,7 +108,7 @@ Partial Class FormFlight
         '
         'Label24
         '
-        Me.Label24.Location = New System.Drawing.Point(381, 363)
+        Me.Label24.Location = New System.Drawing.Point(346, 363)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(235, 31)
         Me.Label24.TabIndex = 23
@@ -115,7 +117,7 @@ Partial Class FormFlight
         '
         'Label23
         '
-        Me.Label23.Location = New System.Drawing.Point(381, 332)
+        Me.Label23.Location = New System.Drawing.Point(346, 332)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(235, 31)
         Me.Label23.TabIndex = 22
@@ -124,7 +126,7 @@ Partial Class FormFlight
         '
         'Label22
         '
-        Me.Label22.Location = New System.Drawing.Point(381, 301)
+        Me.Label22.Location = New System.Drawing.Point(346, 301)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(235, 31)
         Me.Label22.TabIndex = 21
@@ -133,7 +135,7 @@ Partial Class FormFlight
         '
         'Label21
         '
-        Me.Label21.Location = New System.Drawing.Point(381, 270)
+        Me.Label21.Location = New System.Drawing.Point(346, 270)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(235, 31)
         Me.Label21.TabIndex = 20
@@ -142,7 +144,7 @@ Partial Class FormFlight
         '
         'Label20
         '
-        Me.Label20.Location = New System.Drawing.Point(381, 239)
+        Me.Label20.Location = New System.Drawing.Point(346, 239)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(235, 31)
         Me.Label20.TabIndex = 19
@@ -151,7 +153,7 @@ Partial Class FormFlight
         '
         'Label19
         '
-        Me.Label19.Location = New System.Drawing.Point(381, 208)
+        Me.Label19.Location = New System.Drawing.Point(346, 208)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(235, 31)
         Me.Label19.TabIndex = 18
@@ -160,7 +162,7 @@ Partial Class FormFlight
         '
         'Label18
         '
-        Me.Label18.Location = New System.Drawing.Point(381, 177)
+        Me.Label18.Location = New System.Drawing.Point(346, 177)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(235, 31)
         Me.Label18.TabIndex = 17
@@ -169,7 +171,7 @@ Partial Class FormFlight
         '
         'Label17
         '
-        Me.Label17.Location = New System.Drawing.Point(381, 146)
+        Me.Label17.Location = New System.Drawing.Point(346, 146)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(235, 31)
         Me.Label17.TabIndex = 16
@@ -178,7 +180,7 @@ Partial Class FormFlight
         '
         'Label16
         '
-        Me.Label16.Location = New System.Drawing.Point(381, 115)
+        Me.Label16.Location = New System.Drawing.Point(346, 115)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(235, 31)
         Me.Label16.TabIndex = 15
@@ -187,7 +189,7 @@ Partial Class FormFlight
         '
         'Label15
         '
-        Me.Label15.Location = New System.Drawing.Point(381, 84)
+        Me.Label15.Location = New System.Drawing.Point(346, 84)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(235, 31)
         Me.Label15.TabIndex = 14
@@ -196,7 +198,7 @@ Partial Class FormFlight
         '
         'Label14
         '
-        Me.Label14.Location = New System.Drawing.Point(381, 53)
+        Me.Label14.Location = New System.Drawing.Point(346, 53)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(235, 31)
         Me.Label14.TabIndex = 13
@@ -205,6 +207,7 @@ Partial Class FormFlight
         '
         'Label13
         '
+        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.Label13.Location = New System.Drawing.Point(19, 368)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(298, 31)
@@ -213,6 +216,7 @@ Partial Class FormFlight
         '
         'Label12
         '
+        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.Label12.Location = New System.Drawing.Point(19, 337)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(298, 31)
@@ -221,6 +225,7 @@ Partial Class FormFlight
         '
         'Label11
         '
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.Label11.Location = New System.Drawing.Point(19, 306)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(298, 31)
@@ -229,6 +234,7 @@ Partial Class FormFlight
         '
         'Label10
         '
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.Label10.Location = New System.Drawing.Point(19, 275)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(298, 31)
@@ -237,6 +243,7 @@ Partial Class FormFlight
         '
         'Label9
         '
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.Label9.Location = New System.Drawing.Point(19, 244)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(298, 31)
@@ -245,6 +252,7 @@ Partial Class FormFlight
         '
         'Label8
         '
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.Label8.Location = New System.Drawing.Point(19, 213)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(298, 31)
@@ -253,6 +261,7 @@ Partial Class FormFlight
         '
         'Label7
         '
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.Label7.Location = New System.Drawing.Point(19, 182)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(298, 31)
@@ -261,6 +270,7 @@ Partial Class FormFlight
         '
         'Label6
         '
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.Label6.Location = New System.Drawing.Point(19, 151)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(298, 31)
@@ -269,6 +279,7 @@ Partial Class FormFlight
         '
         'Label5
         '
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.Label5.Location = New System.Drawing.Point(19, 120)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(298, 31)
@@ -277,6 +288,7 @@ Partial Class FormFlight
         '
         'Label4
         '
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.Label4.Location = New System.Drawing.Point(19, 89)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(298, 31)
@@ -285,6 +297,7 @@ Partial Class FormFlight
         '
         'Label3
         '
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.Label3.Location = New System.Drawing.Point(19, 58)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(298, 31)
@@ -293,18 +306,18 @@ Partial Class FormFlight
         '
         'Label2
         '
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.Label2.Location = New System.Drawing.Point(254, 15)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
+        Me.Label2.Location = New System.Drawing.Point(95, 13)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(303, 31)
         Me.Label2.TabIndex = 1
         '
         'Label1
         '
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.Label1.Location = New System.Drawing.Point(116, 15)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
+        Me.Label1.Location = New System.Drawing.Point(19, 15)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(106, 31)
+        Me.Label1.Size = New System.Drawing.Size(81, 31)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Рейс:"
         '
@@ -312,10 +325,11 @@ Partial Class FormFlight
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(655, 457)
+        Me.ClientSize = New System.Drawing.Size(629, 457)
         Me.Controls.Add(Me.Panel1)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(6)
         Me.MaximizeBox = False
         Me.Name = "FormFlight"

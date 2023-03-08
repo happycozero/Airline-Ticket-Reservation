@@ -23,6 +23,7 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -46,7 +47,6 @@ Partial Class Form1
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.ButEnd = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -326,24 +326,13 @@ Partial Class Form1
         Me.Label4.TabIndex = 2
         Me.Label4.Text = "Код страны"
         '
-        'ButEnd
-        '
-        Me.ButEnd.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.ButEnd.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.ButEnd.Location = New System.Drawing.Point(177, 491)
-        Me.ButEnd.Name = "ButEnd"
-        Me.ButEnd.Size = New System.Drawing.Size(151, 72)
-        Me.ButEnd.TabIndex = 3
-        Me.ButEnd.Text = "Выход"
-        Me.ButEnd.UseVisualStyleBackColor = False
-        '
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.Button1.Location = New System.Drawing.Point(20, 491)
+        Me.Button1.Location = New System.Drawing.Point(17, 491)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(151, 72)
+        Me.Button1.Size = New System.Drawing.Size(151, 78)
         Me.Button1.TabIndex = 2
         Me.Button1.Text = "Возможные рейсы"
         Me.Button1.UseVisualStyleBackColor = False
@@ -374,7 +363,6 @@ Partial Class Form1
         '
         Me.Panel2.BackColor = System.Drawing.Color.White
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel2.Controls.Add(Me.ButEnd)
         Me.Panel2.Controls.Add(Me.Button3)
         Me.Panel2.Controls.Add(Me.Button1)
         Me.Panel2.Controls.Add(Me.Button2)
@@ -390,9 +378,9 @@ Partial Class Form1
         '
         Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.Button3.Location = New System.Drawing.Point(176, 403)
+        Me.Button3.Location = New System.Drawing.Point(177, 403)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(152, 78)
+        Me.Button3.Size = New System.Drawing.Size(151, 166)
         Me.Button3.TabIndex = 5
         Me.Button3.Text = "Информация о самолёте"
         Me.Button3.UseVisualStyleBackColor = False
@@ -403,7 +391,7 @@ Partial Class Form1
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.Button2.Location = New System.Drawing.Point(17, 403)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(152, 78)
+        Me.Button2.Size = New System.Drawing.Size(151, 78)
         Me.Button2.TabIndex = 3
         Me.Button2.Text = "Информация о рейсе"
         Me.Button2.UseVisualStyleBackColor = False
@@ -674,6 +662,7 @@ Partial Class Form1
         Me.Controls.Add(Me.Panel1)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "Form1"
         Me.ShowIcon = False
@@ -696,7 +685,6 @@ Partial Class Form1
     Friend WithEvents LabCounter As System.Windows.Forms.Label
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents ButEnd As System.Windows.Forms.Button
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
     Friend WithEvents Label22 As System.Windows.Forms.Label
     Friend WithEvents Label21 As System.Windows.Forms.Label
